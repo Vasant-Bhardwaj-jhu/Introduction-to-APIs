@@ -5,14 +5,11 @@ import okhttp3.Response;
 import java.io.IOException;
 
 /**
- * current API key: Rped7ntSY9HyE4aAxz0AQpjyeT4wMHOE
- *
- *
  */
 public class Main {
     public static void main(String[] args) throws IOException {
         final String BASE_URL = "https://sis.jhu.edu/api/classes";
-        final String KEY = "Rped7ntSY9HyE4aAxz0AQpjyeT4wMHOE";
+        final String KEY = System.getenv("SIS-API-KEY");
 
         String endpoint = BASE_URL + "/codes/schools?Key=" + KEY;
 
